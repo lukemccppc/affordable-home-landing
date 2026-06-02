@@ -167,9 +167,20 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer CTA — landing version */}
-      <section className="py-20 bg-primary">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      {/* Footer CTA — hero image with green overlay */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-2.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            loading="lazy"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

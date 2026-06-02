@@ -105,28 +105,54 @@ export default function LandingHero({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25 }}
-                className="flex flex-col sm:flex-row bg-white rounded-full overflow-hidden shadow-lg"
               >
-                <select
-                  value={selectedService}
-                  onChange={e => setSelectedService(e.target.value)}
-                  className="flex-1 px-5 py-4 text-sm text-[#161616] focus:outline-none bg-white appearance-none cursor-pointer"
-                  aria-label="Select a home service"
-                >
-                  <option value="">Select a service...</option>
-                  {services.map(s => (
-                    <option key={s.slug} value={s.slug}>{s.name}</option>
-                  ))}
-                </select>
-                <button
-                  type="button"
-                  onClick={handleGetStarted}
-                  className="flex items-center justify-center gap-2 bg-secondary text-primary font-bold px-7 py-4 text-sm hover:brightness-105 transition-all"
-                  aria-label="Get started"
-                >
-                  Get Started
-                  <ChevronRight size={15} aria-hidden="true" />
-                </button>
+                {/* Mobile: two separate rounded boxes */}
+                <div className="flex flex-col gap-3 sm:hidden">
+                  <select
+                    value={selectedService}
+                    onChange={e => setSelectedService(e.target.value)}
+                    className="w-full px-5 py-4 text-sm text-[#161616] focus:outline-none bg-white appearance-none cursor-pointer rounded-2xl shadow-lg"
+                    aria-label="Select a home service"
+                  >
+                    <option value="">Select a service...</option>
+                    {services.map(s => (
+                      <option key={s.slug} value={s.slug}>{s.name}</option>
+                    ))}
+                  </select>
+                  <button
+                    type="button"
+                    onClick={handleGetStarted}
+                    className="w-full flex items-center justify-center gap-2 bg-secondary text-primary font-bold px-7 py-4 text-sm hover:brightness-105 transition-all rounded-2xl shadow-lg"
+                    aria-label="Get started"
+                  >
+                    Get Started
+                    <ChevronRight size={15} aria-hidden="true" />
+                  </button>
+                </div>
+
+                {/* Desktop: joined pill */}
+                <div className="hidden sm:flex bg-white rounded-full overflow-hidden shadow-lg">
+                  <select
+                    value={selectedService}
+                    onChange={e => setSelectedService(e.target.value)}
+                    className="flex-1 px-5 py-4 text-sm text-[#161616] focus:outline-none bg-white appearance-none cursor-pointer"
+                    aria-label="Select a home service"
+                  >
+                    <option value="">Select a service...</option>
+                    {services.map(s => (
+                      <option key={s.slug} value={s.slug}>{s.name}</option>
+                    ))}
+                  </select>
+                  <button
+                    type="button"
+                    onClick={handleGetStarted}
+                    className="flex items-center justify-center gap-2 bg-secondary text-primary font-bold px-7 py-4 text-sm hover:brightness-105 transition-all"
+                    aria-label="Get started"
+                  >
+                    Get Started
+                    <ChevronRight size={15} aria-hidden="true" />
+                  </button>
+                </div>
               </motion.div>
             )}
 

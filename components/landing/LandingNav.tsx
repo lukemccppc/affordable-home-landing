@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
+// Menu/X kept for potential future use
 
 export default function LandingNav() {
   const [scrolled, setScrolled] = useState(false)
@@ -57,9 +58,9 @@ export default function LandingNav() {
           />
         </Link>
 
-        {/* Desktop CTA — fades + slides in from right on scroll */}
+        {/* CTA — fades in on scroll for ALL screen sizes, replaces hamburger on mobile */}
         <div
-          className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:flex"
+          className="absolute right-0 top-1/2 -translate-y-1/2 flex"
           style={{
             opacity: scrolled ? 1 : 0,
             pointerEvents: scrolled ? 'auto' : 'none',
@@ -75,39 +76,8 @@ export default function LandingNav() {
             Get Started
           </a>
         </div>
-
-        {/* Mobile hamburger — always on right */}
-        <button
-          className="absolute right-0 top-1/2 -translate-y-1/2 md:hidden text-primary p-2"
-          onClick={() => setMobileOpen(true)}
-          aria-label="Open navigation menu"
-        >
-          <Menu size={24} aria-hidden="true" />
-        </button>
       </div>
 
-      {/* Mobile drawer */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-white flex flex-col" role="dialog" aria-modal="true">
-          <div className="flex items-center justify-between px-4 h-[72px] border-b border-gray-200">
-            <Link href="/" aria-label="Affordable Home">
-              <Image src="/images/logo-v3.png" alt="Affordable Home" width={270} height={60} className="h-[54px] w-auto" />
-            </Link>
-            <button onClick={() => setMobileOpen(false)} aria-label="Close menu" className="p-2 text-primary">
-              <X size={24} aria-hidden="true" />
-            </button>
-          </div>
-          <div className="p-6">
-            <a
-              href="#hero"
-              onClick={scrollToHero}
-              className="block text-center font-bold bg-secondary text-primary rounded-md px-4 py-3"
-            >
-              Get Started
-            </a>
-          </div>
-        </div>
-      )}
     </header>
   )
 }
