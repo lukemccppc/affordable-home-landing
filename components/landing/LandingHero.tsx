@@ -289,7 +289,7 @@ export default function LandingHero({
             className="mt-4 text-white text-[13px]"
           >
             Popular:{' '}
-            {['Roofing', 'Windows', 'HVAC', 'Remodeling'].map((item, i) => (
+            {['Roofing', 'Windows', 'Gutters'].map((item, i) => (
               <span key={item}>
                 <button
                   onClick={() => { setSelectedService(item.toLowerCase()); setShowForm(true) }}
@@ -297,7 +297,7 @@ export default function LandingHero({
                 >
                   {item}
                 </button>
-                {i < 3 && <span className="mx-1.5 opacity-50">·</span>}
+                {i < 2 && <span className="mx-1.5 opacity-50">·</span>}
               </span>
             ))}
           </motion.p>
