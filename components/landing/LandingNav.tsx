@@ -50,7 +50,7 @@ export default function LandingNav() {
             width={270}
             height={60}
             style={{
-              height: scrolled ? '54px' : '68px',
+              height: scrolled ? '36px' : '44px',
               width: 'auto',
               transition: 'height 0.45s ease',
             }}
