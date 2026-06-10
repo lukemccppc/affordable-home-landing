@@ -32,7 +32,7 @@ export default function LandingNav() {
 
         {/* Logo — absolutely positioned so we can transition left ↔ center smoothly */}
         <Link
-          href="/"
+          href="/landing"
           aria-label="Affordable Home homepage"
           style={{
             position: 'absolute',
@@ -45,7 +45,7 @@ export default function LandingNav() {
           }}
         >
           <Image
-            src="/images/logo-v3.png"
+            src="/images/logo-green.svg"
             alt="Affordable Home"
             width={270}
             height={60}

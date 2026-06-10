@@ -205,7 +205,7 @@ export default function LandingPage() {
       {/* Minimal footer */}
       <footer className="bg-[#161616] py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <Image src="/images/logo-v3.png" alt="Affordable Home" width={160} height={36} className="h-9 w-auto bg-[#FDFDFD] rounded-lg px-3 py-1" />
+          <Image src="/images/logo-white.svg" alt="Affordable Home" width={160} height={36} className="h-9 w-auto" />
           <p className="text-xs text-accent">&copy; {new Date().getFullYear()} Affordable Home. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="text-xs text-accent hover:text-secondary transition-colors">Privacy Policy</Link>
