@@ -205,12 +205,12 @@ export default function LandingPage() {
       {/* Minimal footer */}
       <footer className="bg-[#161616] py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-3 text-center">
-          <Image src="/images/logo-white.svg" alt="Affordable Home" width={160} height={36} className="h-8 w-auto" />
           <p className="text-xs text-accent">&copy; {new Date().getFullYear()} Affordable Home. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="text-xs text-accent hover:text-secondary transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="text-xs text-accent hover:text-secondary transition-colors">Terms of Service</Link>
           </div>
+          <Image src="/images/logo-white.svg" alt="Affordable Home" width={160} height={36} className="h-8 w-auto" />
         </div>
       </footer>
     </>
