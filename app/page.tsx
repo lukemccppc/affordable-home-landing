@@ -178,7 +178,7 @@ export default function LandingPage() {
             loading="lazy"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-[rgba(0,0,0,0.55)]" />
+          <div className="absolute inset-0 bg-[rgba(0,0,0,0.65)]" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <motion.div

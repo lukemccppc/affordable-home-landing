@@ -58,7 +58,7 @@ export default function LandingHero({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[rgba(0,0,0,0.55)]" />
+        <div className="absolute inset-0 bg-[rgba(0,0,0,0.65)]" />
       </div>
 
       {/* Content */}
