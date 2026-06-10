@@ -37,7 +37,7 @@ export default function LandingNav() {
           style={{
             position: 'absolute',
             top: '50%',
-            left: scrolled ? '0%' : '50%',
+            left: scrolled ? '1rem' : '50%',
             transform: scrolled
               ? 'translateX(0%) translateY(-50%)'
               : 'translateX(-50%) translateY(-50%)',
@@ -60,8 +60,9 @@ export default function LandingNav() {
 
         {/* CTA — fades in on scroll for ALL screen sizes, replaces hamburger on mobile */}
         <div
-          className="absolute right-0 top-1/2 -translate-y-1/2 flex"
+          className="absolute top-1/2 -translate-y-1/2 flex"
           style={{
+            right: '1rem',
             opacity: scrolled ? 1 : 0,
             pointerEvents: scrolled ? 'auto' : 'none',
             transform: `translateY(-50%) translateX(${scrolled ? '0px' : '12px'})`,
